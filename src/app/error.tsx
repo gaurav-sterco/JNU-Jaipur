@@ -6,7 +6,7 @@ export default function PageError({
     error: Error & { digest?: string }
 }) {
     const handleRetry = () => {
-        window.location.reload()
+        window.location.reload() 
     }
 
     return (
