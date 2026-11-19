@@ -4,7 +4,14 @@ import type { ModularFAQInterface } from "./FAQs";
 
 interface FaqTabsInterface {
   modular: ModularFAQInterface[];
+  
 }
+
+const PRIORITY_TYPES = ["General", "Admissions", "Examinations", "Hostel"];
+
+const priorityIndex = (type: string) =>
+  PRIORITY_TYPES.findIndex((p) => p.toLowerCase() === type.trim().toLowerCase());
+
 
 function Accordion({ faqs }: { faqs: ModularFAQInterface[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -49,7 +56,18 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
     {},
   );
 
-  const tabLabels = Object.keys(groupedTabs);
+    // Object.keys keeps first-seen order, so the stable sort below leaves
+    // non-priority types in API order after the priority ones.
+    const tabLabels = Object.keys(groupedTabs).sort((a, b) => {
+      const ai = priorityIndex(a);
+      const bi = priorityIndex(b);
+
+      if (ai !== -1 && bi !== -1) return ai - bi; // both priority -> fixed order
+      if (ai !== -1) return -1;                   // only a is priority -> a first
+      if (bi !== -1) return 1;                    // only b is priority -> b first
+      return 0;                                   // neither -> keep API order
+    });
+
 
   const [activeTab, setActiveTab] = useState<string>(tabLabels[0] ?? "");
 
@@ -58,9 +76,6 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
       <div className="faq_tab">
         <ul
           className="tabs"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="400"
         >
           {tabLabels.map((label, i) => (
             <li
@@ -81,9 +96,6 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
 
       <div
         className="faq_question"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
       >
         {tabLabels.map((label) => {
           const isActive = activeTab === label;

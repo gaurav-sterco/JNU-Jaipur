@@ -23,11 +23,11 @@
 .school_banner_tx h1 span{font-weight:200; display: block;}
 .school_slider_logo{display:flex;gap:3rem;align-items:center;padding-block:2rem 5rem;}
 .school_slider_logo figure{max-width:6.6rem;}
-.school_slider_logo p{font:var(--font-10);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem;}
+.school_slider_logo p{font:var(--font-10);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem; line-height: 2;}
 
 @media(max-width:1536px){
     .school_banner .container-fluid{padding-inline:4.5rem;}
-    .school_banner_content{top:6rem;bottom:10rem;}
+    .school_banner_content{top:8.5rem;bottom:10rem;}
     .school_filter p{padding-right:1rem;}
     .sch_dropdown > .dropdown_toggle{padding-block:0.5rem;padding-right:1.8rem;}
     .sch_dropdown > .dropdown_toggle:after{width:1rem;height:1rem;background-size:1rem;}
@@ -52,7 +52,7 @@
 
 
 .about_soet{ padding-block: 10rem 0rem;}
-.soet_listing{ display: grid; grid-template-columns: repeat(3, 30.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem; margin-top: 6rem; }
+.soet_listing{ display: grid; grid-template-columns: repeat(3, 31.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem; margin-top: 6rem; }
 .soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
 .soet_listing li a:hover{ color: var(--color-cf); cursor: auto;}
 .soet_link_list{ display: flex; margin-top: 8.3rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
@@ -122,13 +122,13 @@
 }
 
 
-.success_speak{padding-block:10rem 15rem;}
+.success_speak{padding-block:16rem 15rem;}
 .success_speak .head_title{text-align:center;}
 .custom_tabs input[type="radio"]{display:none;}
 .custom_tabs .tab_nav{display:flex;gap:1.5rem;border-bottom:1px solid #DFDFDF;justify-content:center;margin-top:2rem;}
-.custom_tabs .tab_nav label{padding:1.2rem 1rem 2rem;font:var(--font-18);cursor:pointer;color:#9E9E9E;border-bottom:0.3rem solid transparent;transition:0.3s ease;font-weight:600;letter-spacing:2.7px;font-family:var(--poppins); text-transform:uppercase;}
-.custom_tabs .tab_nav label:hover{color:var(--color-cf);}
-.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"], .custom_tabs .tab_nav label.active{color:var(--color-cf);border-bottom-color:var(--color-f2);}
+.custom_tabs .tab_nav label,.custom_tabs .tab_nav button{padding:1.2rem 1rem 2rem;font:var(--font-18);cursor:pointer;color:#9E9E9E;border:0;border-bottom:0.3rem solid transparent;background:none;transition:0.3s ease;font-weight:600;letter-spacing:2.7px;font-family:var(--poppins);text-transform:uppercase;}
+.custom_tabs .tab_nav label:hover,.custom_tabs .tab_nav button:hover{color:var(--color-cf);}
+.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"], .custom_tabs .tab_nav label.active,.custom_tabs .tab_nav button.active{color:var(--color-cf);border-bottom-color:var(--color-f2);}
 .custom_tabs .tab_panel{display:none;padding:2rem 0;}
 .custom_tabs .tab_panel.active{display:block;}
 .custom_tabs #tab_one:checked ~ .tab_content .panel_one,.custom_tabs #tab_two:checked ~ .tab_content .panel_two,.custom_tabs #tab_three:checked ~ .tab_content .panel_three{display:block;}
@@ -151,10 +151,11 @@
 .swiper-slide:nth-child(even):not(:has(.success_speak_videobx)) .success_speak_bx::before {
     background-image: url(/images/orange-qoute.svg);
 }
+.success_speak .tab_content{ padding-top: 8rem;}
 
 
 .success_speak_bx p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;}
-.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;object-fit:cover;object-position:top center;}
+.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;background-color: #f4eee2}
 .success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
 .success_speak_bx figure{ margin-bottom: 3rem;}
 .success_speak_bx figure img{ max-width: 5.8rem;margin-top: -4.4rem;}
@@ -165,7 +166,7 @@
 .faq_section .arrow_box img{  filter: brightness(0) invert(1);}
 .faq_section .arrow_box:hover { border-color: var(--color-cf);}
 @media(max-width:1536px){
-    .success_speak{padding-block:5rem 10rem;}
+    .success_speak{padding-block:10rem 0rem;}
     .success_speak .container{max-width:min(1118px, 81.8448023vw);}
     .success_speak_bx p{font:var(--fw-300) 1.3rem / 1.5 var(--stack)}
     .success_speak_bx:before{width:3.8rem;height:2.7rem;top:-1.3rem;left:2rem;}
@@ -173,9 +174,12 @@
     .success_speak_bx{padding:4rem 2.4rem 1.8rem 2rem;}
     .success_speak_bx .success_speak_bx_flex{margin-top:1rem;padding-top:1rem;left:2.4rem;}
     .success_speak_bx .success_speak_bx_flex>span{flex-shrink: 0;}
-    .success_speak_bx span img{width:4rem;height:4rem;}
-    .custom_tabs .tab_nav label{letter-spacing:0.17rem;padding:0.5rem 1rem 1rem;border-bottom:.2rem solid #0000;}
+    .success_speak_bx span img{width:4rem;height:4rem;min-width:4rem;}
+    .custom_tabs .tab_nav label,.custom_tabs .tab_nav button{letter-spacing:0.17rem;padding:0.5rem 1rem 1rem;border-bottom:.2rem solid #0000;}
     .success_speak .swiper-wrapper{padding-top:3rem;}
+    .success_speak .tab_content { padding-top: 3rem; }
+    .our_department_list { grid-template-columns: 22rem 22rem 22rem 19rem; gap: 3.5rem 4.6rem;}
+    .school_studyjnu_section { padding-block: 6rem 10rem; }
 }
 
 
@@ -185,6 +189,7 @@
 
 .school_facity_dep{background-color: var(--color-f5);}
 .school_facity_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 15rem; align-items: center;}
+
 .school_facity_dep_cnt{ max-width: 54.6rem;}
 .school_facity_dep_cnt h5{ color: var(--color-cf); margin-bottom: 4rem; padding-right: 10rem;}
 .school_facity_dep_cnt  p{ font: var(--font-16);}
@@ -203,6 +208,9 @@
 .facility_des_bx h5{ margin-bottom: 1.5rem; line-height: 1.4;}
 
 
+.school_research_section .research_header .head_title{ max-width: 50%;}
+.research_section .research_header{ border-top: 1px solid rgba(6, 63, 138, 0.25); padding-top: 15rem;}
+
 @media (max-width:1536px){
     .sch_facilities { padding-block: 6rem; }
     .sch_facilities .jnu_title_header { padding-inline: 0; }
@@ -214,6 +222,7 @@
     .facility_des_bx figure { margin-bottom: 1.5rem; }
     .facility_dep_grid{ gap: 6rem; padding-block:5rem 8rem;}
     .facility_dep_list{ padding-top: 0;}
+    .research_section .research_header{ padding-top: 10rem;}
 
 }
 
@@ -240,16 +249,12 @@
 .sas_misgrid .sas_mission ul li:before{background-color:var(--color-f2);width:0.7rem;height:0.7rem;}
 
 
-
-
 .sasabt_heighlight{padding-bottom:4.3rem;}
 .sasabt_heighlight .jnu_title_header{padding-block:10rem 5rem;border-top:1px solid #CECECE;}
-.sch_ab_highlight .sasabt_high_grid{padding-bottom:12rem;}
 .sasabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows: 1fr;}
 .sasabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
 .sasabt_high_grid ul>li::before{content:"";z-index:9;background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
-.sch_facilities{padding-block:12rem;}
-.sch_facilities .jnu_title_header{padding-inline:5rem;}
+
 
 .sasachiv_sec{padding-bottom:15.2rem;}
 .sasachiv_sec .jnu_title_header{margin-bottom:5rem;text-align:left;}
@@ -261,12 +266,169 @@
 .sasachiv_caption>p{font:var(--font-16);font-weight:300;line-height:1.6;}
 .sasabt_heighlight { padding-bottom: 4.3rem; }
 .sasabt_heighlight .jnu_title_header{padding-block: 10rem 5rem;border-top: 1px solid #CECECE;}
-.sch_ab_highlight .sasabt_high_grid{padding-bottom: 12rem;}
+.sasabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
 .sasabt_high_grid ul { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; padding: 0; display: grid; }
 .sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; }
 .sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
 
 
 
-.research_section .research_header{ border-top: 1px solid rgba(6, 63, 138, 0.25); padding-top: 15rem;}
-.school_research_section .research_header .head_title{ max-width: 50%;}
+
+
+
+/* SBM About Aria Start */
+.sbmabt_sec{position:relative;padding-block:12rem 10rem;}
+.sbmabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:45rem;position:absolute;top:0;bottom:0;left:0;}
+.sbmabt_sec .head_title{text-align: center; margin-bottom:8.4rem;padding-inline:4.5rem;}
+.sbmabt_sec .head_title>blockquote{margin-bottom: 1.2rem;}
+.sbmabt_sec .head_title>h5{font:var(--font-24);font-weight:300;color:var(--color-black);margin-bottom:6rem;}
+.sbmabt_sec .head_title>p{font:var(--font-21);font-weight:300;line-height: 1.7; color:var(--color-black);}
+
+.sbmabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sbmabt_grid>figure:nth-child(3){max-width:60rem;margin-left:auto;}
+.sbmabt_caption{padding-top:3.9rem;padding-inline:5.7rem 12.5rem;}
+.sbmabt_caption>p{font:var(--font-16);font-weight: 300; color:var(--color-black);}
+
+/* SBM Heighligh Aria */
+.sbmabt_heighlight{padding-bottom:4.3rem;}
+.sbmabt_heighlight .jnu_title_header{padding-block:10rem 5rem;border-top:1px solid #CECECE;}
+.sbmabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
+.sbmabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;}
+.sbmabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
+.sbmabt_high_grid ul>li::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+
+/* SBM Mission Vision Aria */
+.sbm_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid;margin-top:2.9rem;}
+.sbm_misgrid .sbm_vision{position:relative;background-color:var(--color-cf);padding:8.4rem 11.2rem 8.4rem 11.3rem;}
+.sbm_misgrid .sbm_mission{padding:8.4rem 5rem 8.4rem 12.5rem;}
+.sbm_misgrid .sbm_vision::before{content:"";z-index:0;opacity:.4;background-image:url(/images/vision-texture.svg);background-repeat:no-repeat;background-size:cover;width:100%;height:100%;position:absolute;top:0;bottom:0;right:0;}
+.sbm_misgrid h5{margin-bottom:5rem;color:var(--color-cf);font-weight:500;}
+.sbm_misgrid .sbm_vision h5{color:var(--color-white);}
+.sbm_misgrid .sbm_vision blockquote{font:var(--font-21);color:var(--color-white);font-weight:300;line-height:3.6rem;}
+.sbm_misgrid .sbm_mission blockquote{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:3.6rem;}
+.sbmabt_figure{margin-top: 8rem;}
+
+
+.sbmhead_sec{padding-bottom: 0;}
+
+/* SBM Achivments Aria */
+.sbmachive_sec{position:relative;padding-block:2.5rem 10rem;}
+.sbmachive_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sbmachive_caption{background-color:var(--color-white);padding:15.3rem 21.6rem 15.3rem 14.9rem;}
+.sbmachive_caption>h5{font-weight:var(--fw-500);color:var(--color-cf);margin-bottom:5rem;}
+.sbmachive_caption>ul{padding:0;margin:0;}
+.sbmachive_caption>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;}
+.sbmachive_caption>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+
+
+/* SBM Teaching Pedagogies */
+.sbmtp_sec{padding-block:5rem 8rem;}
+.sbmtp_sec .jnu_title_header{margin-bottom: 4rem;}
+.sbmtp_sec .jnu_title_header .font21{margin-bottom: 0;}
+.sbmtp_sec .jnu_title_header p{font:var(--font-16);font-weight:300;margin-top:2.4rem;padding-inline:10rem;}
+.sbmtp_grid{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmtp_grid>.sbmtp_item{background:var(--color-white);text-align:center;padding:6.5rem 2.6rem 6.9rem;position:relative;}
+.sbmtp_grid>.sbmtp_item::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+.sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight:300;color:var(--color-23);margin-bottom:1.6rem;}
+.sbmtp_grid>.sbmtp_item>p{font:var(--font-16);font-weight:300;}
+
+
+/* SBM Specializations */
+.sbmsplz_sec{position: relative; padding-block:8.2rem 13.6rem;z-index: 1;}
+.sbmsplz_sec::after{content:"";z-index:-1;background:url(/images/sbmsplz-bg.svg) #CF1E62;background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height:calc(100% - 37%);position:absolute;bottom:0;left:0;}
+.sbmsplz_sec .jnu_title_header{margin-bottom:4rem;}
+.sbmsplz_sec .jnu_title_header .font21{margin-bottom:0;}
+.sbmsplz_sec .jnu_title_header p{font:var(--font-16);font-weight:bold;margin-top:0.7rem;}
+.sbmsplz_grid{grid-template-columns:repeat(3,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmsplz_grid>.sbmsplz_item{background:var(--color-white);padding:5.7rem 3.1rem;position:relative;}
+.sbmsplz_grid>.sbmsplz_item>h6{font:var(--font-16);line-height:1.8;font-weight:500;color:var(--color-black);margin-bottom:2.3rem;}
+.sbmsplz_grid>.sbmsplz_item>ul{padding:0;margin:0;}
+.sbmsplz_grid>.sbmsplz_item>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:0.5rem;padding-left:2.4rem;list-style:none;position:relative;}
+.sbmsplz_grid>.sbmsplz_item>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+
+
+
+
+/* SBM Research Facility Aria */
+.sbmrch_sec{padding-block:12rem 10rem;position:relative;}
+.sbmrch_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;width: 100%; max-height:82rem;position:absolute;top:0;bottom:0;left:0;}
+.sbmrch_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 2.5rem;}
+.sbmrch_caption{flex-direction:column;justify-content:center;align-items:start;padding-inline:12.5rem 19rem;display:flex;}
+.sbmrch_caption:nth-child(odd){padding-inline:12.6rem 26.3rem;}
+.sbmrch_caption>blockquote{font:var(--font-24);font-weight:300;color:var(--color-black);line-height:1.5;margin-bottom:2.4rem;}
+.sbmrch_caption>p{font:var(--font-16);font-weight:300;}
+
+.sbmrchwrap_caption{text-align:center;margin-block:12rem 5.6rem;padding-top:10rem; padding-inline:1rem;border-top:1px solid rgb(206,206,206);}
+.sbmrchwrap_caption>h5{font:var(--font-21);line-height:1.7;font-weight:300;margin-bottom:3.2rem;}
+.sbmrchwrap_caption>p{font:var(--font-16);font-weight:300;}
+
+.sbmsrch_heighlight{position: relative; padding-bottom: 10rem;z-index: 1;}
+.sbmsrch_heighlight::after{content:"";z-index:-1;background:url(/images/sbmsplz-bg.svg) #CF1E62;background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height: 100%; max-height:52rem;position:absolute;bottom:0;left:0;}
+
+.sbmsrch_hrighgrid>ul{grid-template-columns:repeat(3,1fr);gap:3.9rem 2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmsrch_hrighgrid>ul>li{font:var(--font-24);font-weight:300;color:var(--color-23);background:var(--color-white);text-align:center;padding:7.4rem 6.6rem;position:relative;}
+.sbmsrch_hrighgrid>ul>li::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+ 
+.sbmsrch_hrighgrid .load_more_btn{padding-top:6.6rem;}
+.sbmsrch_hrighgrid .load_more_btn a{color:var(--color-white);;}
+.sbmsrch_hrighgrid .load_more_btn a span{border:1px solid var(--color-white);}
+.sbmsrch_hrighgrid .load_more_btn a span>img{filter:brightness(0) invert(1);}
+.agr_sch_facilities { padding-block: 12rem 7.5rem;}
+.agr_sch_facilities .jnu_title_header{ padding-inline: 15rem;}
+.agr_fac_overview{ text-align: center;}
+.agr_fac_overview figure{ margin-bottom: 5rem;}
+.agr_fac_overview p{ font: var(--font-16); max-width: 80%; margin: 0 auto;}
+.agr_fac_advanced{ padding-block: 12rem 8rem;}
+.advanced_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: flex-end;}
+.advanced_right{ padding-left: 15rem; max-width: 75rem;}
+.advanced_right p{ font: var(--font-16); font-weight: 300; max-width: 50rem;}
+
+.advanced_right h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
+.advanced_right figure{ margin-top: 7.7rem;}
+.school_facity_grid figure{ max-width: 60rem;}
+.school_facity_grid_sc{display: grid; grid-template-columns: 61rem 85rem; gap: 15rem; align-items: center; padding-left: 11rem;}
+.school_facity_grid_sc h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
+.school_facity_grid_sc p{ font: var(--font-16); font-weight: 300; max-width: 45rem;}
+.school_facity_farms{ padding-bottom: 12rem;}
+
+.school_facity_grid_sc2{display: grid; grid-template-columns: 60rem 85rem; gap: 2.5rem; align-items: center; padding-left: 11rem;}
+.school_facity_grid_sc2 h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
+.school_facity_grid_sc2 p{ font: var(--font-16); font-weight: 300; max-width: 50rem;}
+.soil_section{ position: relative; padding-top: 11.2rem;}
+.soil_section:before { content: ""; z-index: -1; background-image: url(/images/soil-vector.svg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 75rem; position: absolute; top: 0; bottom: 0; left: 0;  background-color: var(--color-cf);}
+.soil_section .soil_header{ text-align: center;}
+.soil_section .soil_header *{ color: var(--color-white);}
+.soil_section .soil_header h5{ font-weight: 500;}
+.soil_section .soil_header blockquote{ padding-top: 3rem; font-weight: 300; max-width: 149.5rem; margin: 0 auto 5rem; line-height: 1.5;}
+.soil_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.4rem; margin-top: 4rem;}
+.soil_grid h5 { color: var(--color-cf); margin-block:3rem 2.4rem; font-weight: 500; }
+.soil_grid p{ font: var(--font-16); font-weight: 300; padding-right: 14rem;}
+
+.soil_data_scetion{ padding-block: 16.7rem 15rem;}
+.soil_data_scetion .soil_data_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center;}
+.soil_data_grid_right{ padding-inline: 15rem 14rem;}
+
+.soil_data_grid_right h5 { color: var(--color-cf); margin-block:3rem 2.4rem; font-weight: 500; }
+.soil_data_grid_right p{ font: var(--font-16); font-weight: 300;}
+
+@media (max-width:1536px){
+.agr_sch_facilities .jnu_title_header { padding-inline: 0; }
+.agr_sch_facilities { padding-block: 8rem 4.5rem; }
+.agr_fac_overview figure { margin-bottom: 4rem; }
+.advanced_right { max-width: 75rem; padding-left: 6rem; }
+.advanced_right figure { margin-top: 2.7rem; }
+.agr_fac_overview p{max-width: 100%;}
+.agr_fac_advanced { padding-block: 7rem 6rem; }
+.advanced_right h5{ margin-bottom: 1.5rem;}
+.school_facity_grid_sc { grid-template-columns: 37.7rem 31rem; gap: 6rem; padding-left: 0; }
+.school_facity_grid_sc2{ gap: 3rem; padding-left: 0; grid-template-columns: 36rem auto;}
+.school_facity_grid_sc2 p{ padding-right: 3rem;}
+.school_facity_farms { padding-bottom: 8rem; }
+.soil_section { padding-top: 8rem; }
+.soil_section:before{height: 45rem;}
+.soil_grid{ margin-top: 3rem;}
+.soil_grid h5{margin-block: 2rem 1.7rem;}
+.soil_grid p{padding-right: 6rem;}
+.soil_data_scetion { padding-block: 10rem 8rem; }
+.soil_data_grid_right { padding-inline: 4rem 4rem; }
+}
