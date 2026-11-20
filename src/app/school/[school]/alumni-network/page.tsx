@@ -60,7 +60,7 @@ export default async function SchoolAlumniPage({
 
   return (
     <>
-    {alumniData && alumniData.length > 0 && (
+    {/* {alumniData && alumniData.length > 0 && (
         <section className="alumni_mainsec hero_bg_pattern">
             <div className="container">
                 <div className="gridbox_three">
@@ -143,7 +143,7 @@ export default async function SchoolAlumniPage({
             </div>
         </section>
     )}
-
+*/}
 
       {combineHTML && (
         <ReactParserDynamic
