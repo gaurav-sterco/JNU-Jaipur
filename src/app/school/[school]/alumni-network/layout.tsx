@@ -30,8 +30,7 @@ export default async function SchoolAlumniLayout({
       <MainWrapper>
         <main className="site_main">
           <InnerHead headData={headData} />
-          {/* {data.data?.sections?.length == 0 ? <ComingSoon /> : children} */}
-          {children}
+          {data.data?.sections?.length == 0 ? <ComingSoon /> : children}
         </main>
       </MainWrapper>
     </>
