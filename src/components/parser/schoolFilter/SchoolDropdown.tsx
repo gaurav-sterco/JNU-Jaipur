@@ -17,7 +17,10 @@ const ALLOWED_URLS=[
   'school-of-life-basic-sciences',
   'school-of-language-literature-society',
   'school-of-business-management',
-  'school-of-education'
+  'school-of-education',
+  'school-of-fashion-design',
+  'school-of-media-studies',
+  'school-of-hotel-management-catering-technology',
 ];
 
 export default function SchoolDropdown({ data, currentSlug }: SchoolDropdownProps) {
