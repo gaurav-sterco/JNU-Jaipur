@@ -1,0 +1,63 @@
+"use client";
+
+import { useState } from "react";
+import ProgramsLeftFilter from "./ProgramsLeftFilter";
+import ProgramsListing from "./ProgramsListing";
+import type { ProgramsDataInterface } from "./ProgramsOffered";
+import ProgramSearch from "./ProgramSearch";
+
+interface ProgramPropsInterface {
+  search?: string;
+  school?: string;
+  duration?: string;
+  degree?: string;
+  specialization?: string;
+  programsData: ProgramsDataInterface[];
+  currentSlug: string;
+  schoolSlug?: string;
+  data: any;
+}
+
+export default function ProgramMainData({
+  search,
+  school,
+  duration,
+  degree,
+  specialization,
+  programsData,
+  currentSlug,
+  schoolSlug,
+  data,
+}: ProgramPropsInterface) {
+  const [loading, isDataLoading] = useState(false);
+
+  return (
+    <>
+      <div className="prg_search">
+        <ProgramSearch
+          key={search ?? ""}
+          isDataLoading={isDataLoading}
+        />
+      </div>
+
+      <div className="program_listing_grid">
+        <div className="progrem_left">
+          <ProgramsLeftFilter
+            isDataLoading={isDataLoading}
+            hideSchoolFilter={currentSlug === "school"}
+          />
+        </div>
+
+        <ProgramsListing
+          key={`${search ?? ""}-${school ?? ""}-${duration ?? ""}-${degree ?? ""}-${specialization ?? ""}`}
+          programsData={programsData}
+          currentSlug={currentSlug}
+          schoolSlug={schoolSlug}
+          filters={{ search, school, duration, degree, specialization }}
+          hasMoreInitially={Boolean(data?.next_page_url)}
+          loading={loading}
+        />
+      </div>
+    </>
+  );
+}

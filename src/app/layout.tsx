@@ -1,0 +1,60 @@
+import type { Metadata } from "next";
+import { Stack_Sans_Text, Poppins } from 'next/font/google'
+import AosProvider from "@/components/common/AosProvider";
+
+import RevealImages from "@/components/common/RevealImages";
+import dynamic from "next/dynamic";
+import Providers from "@/lib/Providers";
+import ScrollToTop from "@/components/common/ScrollToTop";
+import RouteProgress from "@/components/loader/RouteProgress";
+const Footer = dynamic(()=>import("@/components/footer/Footer"));
+import '@/styles/protected/globals.css'
+
+
+const stackSansText = Stack_Sans_Text({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--stack',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--poppins',
+});
+
+export const metadata: Metadata = {
+  title: "JNU",
+  description: "Jaipur National University",
+  icons: {
+    icon: '/images/icons/favicon.ico',
+    shortcut: '/images/icons/favicon.ico',
+    apple: '/images/icons/favicon.ico',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${stackSansText.variable} ${poppins.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <RouteProgress />
+        <Providers>
+          <AosProvider>
+            {children}
+            <Footer />
+            <RevealImages />
+          </AosProvider>
+        </Providers>
+        <ScrollToTop />
+      </body>
+    </html>
+  );
+}
