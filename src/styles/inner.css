@@ -294,7 +294,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 #career p { font: var(--font-16); margin-bottom: 4rem; padding-right: 10rem; }
 .career_bx { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.2rem; list-style: none; padding: 0; margin-top: 1.2rem; }
 .career_bx li { background-color: var(--color-white); padding: 3rem 5rem; text-align: center; font: var(--font-14); font-weight: 300; }
-.career_bx li figure { max-width: 6rem; margin:0 auto 2rem; }
+.career_bx li figure { max-width: 8rem; margin:0 auto 2rem; }
 .load_more_icon a { display: flex; font: var(--font-16); color: var(--color-cf); gap: 1.5rem; align-items: center; border-bottom: 1px dashed var(--color-cf); padding-bottom: 0.5rem; }
 .load_more_icon a span { text-align: center; display: block; padding: 0.7rem 0.3rem; max-width: 1.3rem; }
 .load_more_icon a:hover { color: var(--color-black); border-color: var(--color-black); }
