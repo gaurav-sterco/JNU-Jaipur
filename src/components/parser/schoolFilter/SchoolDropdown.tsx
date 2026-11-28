@@ -9,19 +9,6 @@ interface SchoolDropdownProps {
     data: DataInterface[];
     currentSlug?: string;
 }
-const ALLOWED_URLS=[
-  'school-of-engineering-technology',
-  'school-of-allied-health-sciences',
-  'school-of-computer-system-sciences',
-  'school-of-agricultural-science',
-  'school-of-life-basic-sciences',
-  'school-of-language-literature-society',
-  'school-of-business-management',
-  'school-of-education',
-  'school-of-fashion-design',
-  'school-of-media-studies',
-  'school-of-hotel-management-catering-technology',
-];
 
 export default function SchoolDropdown({ data, currentSlug }: SchoolDropdownProps) {
     const [open, setOpen] = useState(false);
@@ -55,9 +42,8 @@ export default function SchoolDropdown({ data, currentSlug }: SchoolDropdownProp
 
             <div className={`dropdown ${open ? "show" : ""}`}>
                 <ul>
-                    {data.map((item) => {
-                        if(ALLOWED_URLS.includes(item.slug)){
-                             return <li key={item.id} className={item.slug === currentSlug ? "active" : ""}>
+                    {data.map((item) => (
+                        <li key={item.id} className={item.slug === currentSlug ? "active" : ""}>
                             <Link
                                 href={`${BASE_URL}school/${item.slug}`}
                                 className="sch-link"
@@ -66,9 +52,7 @@ export default function SchoolDropdown({ data, currentSlug }: SchoolDropdownProp
                                 {item.name}
                             </Link>
                         </li>
-                        }
-                       
-                    })}
+                    ))}
                 </ul>
             </div>
         </div>

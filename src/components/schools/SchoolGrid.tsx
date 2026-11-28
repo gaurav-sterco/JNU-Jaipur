@@ -22,10 +22,7 @@ const ALLOWED_URLS=[
   'school-of-life-basic-sciences',
   'school-of-language-literature-society',
   'school-of-business-management',
-  'school-of-education',
-  'school-of-fashion-design',
-  'school-of-media-studies',
-  'school-of-hotel-management-catering-technology',
+  'school-of-education'
 ];
 
 export default function SchoolGrid({
@@ -54,7 +51,7 @@ export default function SchoolGrid({
             {item.designation && <p>{item.designation}</p>}
           </div>
 
-          {item.slug && ALLOWED_URLS.includes(item.slug) && (
+          {item.slug && (
             <Link
               href={`${BASE_URL}school/${item.slug}`}
               className="overlap_btn"
